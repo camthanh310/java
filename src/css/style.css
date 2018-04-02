@@ -1,0 +1,42 @@
+.wrapper {
+    -fx-text-align: center;
+    -fx-background-color: #fff;
+    -fx-font-family: 'Tahoma';
+}
+
+.title{
+    -fx-margin-bottom: 30;
+    -fx-font-size: 26;
+    -fx-text-fill:#13caca;
+    -fx-font-weight: 600;
+    -fx-letter-spacing: 2;
+}
+
+.input {
+    -fx-padding: 15;
+    -fx-letter-spacing: 1px;
+}
+
+.button{
+    -fx-margin: 20;
+    -fx-padding: 10;
+    -fx-font-size: 18;
+    -fx-background-color:#13caca;
+    -fx-text-fill: #fff;
+}
+
+.button:hover {
+    -fx-text-fill: #13caca;
+    -fx-background-color: #FFF;
+    -fx-border-color: #13caca;
+}
+
+.form-control{
+    -fx-padding: 15;
+    -fx-text-fill: #616161;
+    -fx-background-color: #fff;
+    -fx-font-size: 0.85em;
+    -fx-font-weight: 300;
+    -fx-height: 40;
+    -fx-letter-spacing: 2;
+}

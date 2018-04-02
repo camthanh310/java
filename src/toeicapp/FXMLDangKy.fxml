@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="form-control" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toeicapp.FXMLDangKyController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" styleClass="title" text="ĐĂNG KÝ" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtTenDangNhap" labelFloat="true" layoutX="80.0" layoutY="77.0" prefHeight="24.0" prefWidth="440.0" promptText="Tên đăng nhập" styleClass="form-control" />
+      <JFXPasswordField fx:id="txtMatKhau" labelFloat="true" layoutX="80.0" layoutY="138.0" prefHeight="24.0" prefWidth="440.0" promptText="Mật khẩu" styleClass="form-control" />
+      <JFXTextField fx:id="txtHo" labelFloat="true" layoutX="80.0" layoutY="200.0" prefHeight="24.0" prefWidth="440.0" promptText="Họ và tên lót" styleClass="form-control" />
+      <JFXTextField fx:id="txtTen" labelFloat="true" layoutX="80.0" layoutY="266.0" prefHeight="24.0" prefWidth="440.0" promptText="Tên" styleClass="form-control" />
+      <JFXButton fx:id="btnDangKy" layoutX="203.0" layoutY="335.0" onAction="#themNguoiDungAction" text="Đăng ký" />
+      <JFXButton fx:id="btnLamMoi" layoutX="305.0" layoutY="335.0" text="Làm mới" />
+   </children>
+</AnchorPane>
