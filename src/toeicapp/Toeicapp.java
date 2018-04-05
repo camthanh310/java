@@ -19,7 +19,7 @@ public class Toeicapp extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDangNhap.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLCauHoi.fxml"));
         
         Scene scene = new Scene(root);
         

@@ -53,6 +53,21 @@ Contributor(s):
         <property column="ten" name="ten" type="string"/>
         <property column="loai_quyen" name="loaiQuyen" type="boolean"/>
     </class>
-
-
+    
+    <class name="toeic.models.CauHoi" table="cau_hoi">
+        <meta attribute="class-description">Thông tin câu hỏi</meta>
+        <id column="ma_cau_hoi" name="maCauHoi" type="string"/>
+        <property column="cau_hoi" name="cauHoi" type="string"/>
+        
+        <one-to-one name="dapAn"
+                    class="toeic.models.DapAn" cascade="save-update"/>
+    </class>
+    <class name="toeic.models.DapAn" table="dap_an">
+        <meta attribute="class-discription">Thông tin đáp án</meta>
+        <id column="ma_dap_an" name="maDapAn" type="string"/>
+        <one-to-one name="cauHoi"
+                    class="toeic.models.CauHoi" cascade="save-update"/>
+        <property column="dap_an" name="dapAn" type="string"/>
+        
+    </class>
 </hibernate-mapping>
