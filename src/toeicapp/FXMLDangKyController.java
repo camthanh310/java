@@ -8,17 +8,12 @@ package toeicapp;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.UUID;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -54,7 +49,7 @@ public class FXMLDangKyController implements Initializable {
         factory = HibernateUtil.getSessionFactory();
     }  
     
-    public void themNguoiDung() throws IOException{
+    public void themNguoiDung(){
         Session session = this.factory.openSession();
         
         String maNguoiDung = UUID.randomUUID().toString();
@@ -67,22 +62,14 @@ public class FXMLDangKyController implements Initializable {
         nguoiDung.setMatKhau(txtMatKhau.getText());
         nguoiDung.setHoVaTenLot(txtHo.getText());
         nguoiDung.setTen(txtTen.getText());
-        nguoiDung.setLoaiQuyen(false);
+        nguoiDung.setLoaiQuyen(true);
         session.save(nguoiDung);
         trans.commit();
-        session.close();
-        Stage s = (Stage) btnDangKy.getScene().getWindow();
-        s.hide();
+        session.close();  
     }
     
-    public void lamMoiNguoiDung(ActionEvent e){
-        this.txtTen.setText("");
-        this.txtHo.setText("");
-        this.txtMatKhau.setText("");
-        this.txtTenDangNhap.setText("");
-    }
-    
-    public void themNguoiDungAction(ActionEvent e) throws IOException{
+    @FXML
+    public void themNguoiDungAction(ActionEvent e){
         this.themNguoiDung();
     }
     

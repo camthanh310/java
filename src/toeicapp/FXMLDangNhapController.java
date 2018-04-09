@@ -5,6 +5,7 @@
  */
 package toeicapp;
 
+import Util.TranferForm;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -37,16 +38,12 @@ public class FXMLDangNhapController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param e
+     * @throws java.io.IOException
      */
+    @FXML
     public void dangKy(ActionEvent e) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDangKy.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.setTitle("Toeic");
-        stage.show();
+        TranferForm.loadWindow(getClass().getResource("FXMLDangKy.fxml"), "Đăng ký người dùng", null);
         
     }
     @Override

@@ -5,6 +5,7 @@
  */
 package toeicapp;
 
+import Util.TranferForm;
 import java.io.IOException;
 import static java.lang.System.exit;
 import java.net.URL;
@@ -96,29 +97,13 @@ public class FXMLHomeController implements Initializable {
                 }
             });
         } else if (event.getSource() == imgSetting) {
-            Stage stage = (Stage) imgSetting.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            TranferForm.loadWindow(getClass().getResource("FXMLCaiDat.fxml"), "Cài đặt", null);
         } else if (event.getSource() == imgQuestion) {
-            Stage stage = (Stage) imgQuestion.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("FXMLCauHoi.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            TranferForm.loadWindow(getClass().getResource("FXMLCauHoi.fxml"), "Thêm câu hỏi", null);
         } else if (event.getSource() == imgGrammar) {
-            Stage stage = (Stage) imgGrammar.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("NguPhap.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            TranferForm.loadWindow(getClass().getResource("FXMLNguPhap.fxml"), "Ngữ pháp", null);
         } else if (event.getSource() == imgPicture) {
-            Stage stage = (Stage) imgPicture.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("HinhAnh.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            TranferForm.loadWindow(getClass().getResource("FXMLHinhAnh.fxml"), "Hình ảnh", null);
         }
     }
 

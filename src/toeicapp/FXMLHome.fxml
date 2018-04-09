@@ -63,7 +63,7 @@
             <Label text="QUESTION" />
          </children>
       </VBox>
-      <ImageView fitHeight="91.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <ImageView fitHeight="120.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/toeic2.jpg" />
          </image>
