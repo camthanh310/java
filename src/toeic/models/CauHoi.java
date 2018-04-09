@@ -11,10 +11,10 @@ package toeic.models;
  */
 public class CauHoi {
     private String maCauHoi;
-    private LoaiCauHoi loaiCauHoi;
     private String cauHoi;
     private DapAn dapAn;
-
+    
+    
     /**
      * @return the maCauHoi
      */
@@ -42,20 +42,6 @@ public class CauHoi {
      */
     public void setCauHoi(String cauHoi) {
         this.cauHoi = cauHoi;
-    }
-
-    /**
-     * @return the loaiCauHoi
-     */
-    public LoaiCauHoi getLoaiCauHoi() {
-        return loaiCauHoi;
-    }
-
-    /**
-     * @param loaiCauHoi the loaiCauHoi to set
-     */
-    public void setLoaiCauHoi(LoaiCauHoi loaiCauHoi) {
-        this.loaiCauHoi = loaiCauHoi;
     }
 
     /**
